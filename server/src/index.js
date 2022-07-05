@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server';
 import typeDefs from './schema.js';
-import { resolvers } from './resolvers';
+import { resolvers } from './resolvers.js';
 import { TrackAPI } from './datasources/track-api.js';
 
 const server = new ApolloServer({
