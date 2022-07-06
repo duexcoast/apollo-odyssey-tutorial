@@ -2,6 +2,11 @@ import { ApolloServer } from 'apollo-server';
 import typeDefs from './schema.js';
 import { resolvers } from './resolvers.js';
 import { TrackAPI } from './datasources/track-api.js';
+import prettyerror from 'pretty-error';
+
+// Makes nodejs console errrors readable.
+const pe = new prettyerror();
+pe.start();
 
 const server = new ApolloServer({
   typeDefs,

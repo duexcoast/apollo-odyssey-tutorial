@@ -13,7 +13,7 @@ export const resolvers = {
     author: ({ authorId }, _, { dataSources }) => {
       return dataSources.trackAPI.getAuthor(authorId);
     },
-    module: ({ id }, _, { dataSources }) => {
+    modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getModules(id);
     },
   },

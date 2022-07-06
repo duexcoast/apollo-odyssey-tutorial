@@ -30,6 +30,7 @@ const typeDefs = gql`
 
   "Individual modules"
   type Module {
+    id: ID!
     "The module's title"
     title: String!
     "Length of module, in minutes"
