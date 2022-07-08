@@ -7,6 +7,10 @@ const typeDefs = gql`
     "Return a specific track by id"
     track(id: ID!): Track
   }
+
+  type Mutation {
+    incrementCounter(id: ID!): IncrementCounterResponse
+  }
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
@@ -44,6 +48,13 @@ const typeDefs = gql`
     name: String!
     "Author's profile picture url"
     photo: String
+  }
+
+  type IncrementCounterResponse {
+    code: Int!
+    success: Boolean!
+    message: String!
+    track: Track
   }
 `;
 
