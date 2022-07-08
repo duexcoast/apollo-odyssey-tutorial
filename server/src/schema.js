@@ -9,7 +9,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    incrementCounter(id: ID!): IncrementCounterResponse
+    incrementTrackViews(id: ID!): IncrementTrackViewsResponse
   }
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
@@ -50,7 +50,7 @@ const typeDefs = gql`
     photo: String
   }
 
-  type IncrementCounterResponse {
+  type IncrementTrackViewsResponse {
     code: Int!
     success: Boolean!
     message: String!

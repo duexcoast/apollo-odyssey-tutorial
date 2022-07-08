@@ -10,8 +10,14 @@ export const resolvers = {
     },
   },
   Mutation: {
-    incrementCounter: (_, { id }, { dataSources }) => {
-      return dataSources.trackAPI.incrementCounter(id);
+    incrementTrackViews: async (_, { id }, { dataSources }) => {
+      const track = await dataSources.trackAPI.incrementCounter(id);
+      return {
+        code: 200,
+        success: true,
+        message: `Successfully incremented number of views for track ${id} `,
+        track,
+      };
     },
   },
   Track: {
