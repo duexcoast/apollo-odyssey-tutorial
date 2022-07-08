@@ -9,6 +9,11 @@ export const resolvers = {
       return dataSources.trackAPI.getTrack(id);
     },
   },
+  Mutation: {
+    incrementCounter: (_, { id }, { dataSources }) => {
+      return dataSources.trackAPI.incrementCounter(id);
+    },
+  },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
       return dataSources.trackAPI.getAuthor(authorId);
